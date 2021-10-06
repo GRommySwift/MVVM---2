@@ -15,6 +15,10 @@
 		040A9BEE270D1429009CFF21 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BED270D1429009CFF21 /* TableViewController.swift */; };
 		040A9BF0270D1475009CFF21 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BEF270D1475009CFF21 /* Profile.swift */; };
 		040A9BF2270D166F009CFF21 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BF1270D166F009CFF21 /* TableViewCell.swift */; };
+		040A9BF6270D2578009CFF21 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BF5270D2578009CFF21 /* ViewModel.swift */; };
+		040A9BF8270D260D009CFF21 /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BF7270D260D009CFF21 /* TableViewModelType.swift */; };
+		040A9BFD270D28C9009CFF21 /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BFC270D28C9009CFF21 /* TableViewCellViewModelType.swift */; };
+		040A9BFF270D29C6009CFF21 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A9BFE270D29C6009CFF21 /* TableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		040A9BED270D1429009CFF21 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		040A9BEF270D1475009CFF21 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		040A9BF1270D166F009CFF21 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		040A9BF5270D2578009CFF21 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		040A9BF7270D260D009CFF21 /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
+		040A9BFC270D28C9009CFF21 /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		040A9BFE270D29C6009CFF21 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +68,11 @@
 		040A9BD8270D1371009CFF21 /* MVVM - 2 */ = {
 			isa = PBXGroup;
 			children = (
-				040A9BD9270D1371009CFF21 /* AppDelegate.swift */,
-				040A9BDB270D1371009CFF21 /* SceneDelegate.swift */,
-				040A9BED270D1429009CFF21 /* TableViewController.swift */,
+				040A9BF9270D2682009CFF21 /* ViewModel */,
 				040A9BF3270D1702009CFF21 /* Model */,
 				040A9BF4270D170B009CFF21 /* View */,
-				040A9BDF270D1371009CFF21 /* Main.storyboard */,
-				040A9BE2270D1375009CFF21 /* Assets.xcassets */,
-				040A9BE4270D1375009CFF21 /* LaunchScreen.storyboard */,
-				040A9BE7270D1375009CFF21 /* Info.plist */,
+				040A9BFA270D268E009CFF21 /* Protocols */,
+				040A9BFB270D26A8009CFF21 /* Supporting Files */,
 			);
 			path = "MVVM - 2";
 			sourceTree = "<group>";
@@ -84,9 +88,41 @@
 		040A9BF4270D170B009CFF21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				040A9BED270D1429009CFF21 /* TableViewController.swift */,
 				040A9BF1270D166F009CFF21 /* TableViewCell.swift */,
+				040A9BDF270D1371009CFF21 /* Main.storyboard */,
+				040A9BE4270D1375009CFF21 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		040A9BF9270D2682009CFF21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				040A9BF5270D2578009CFF21 /* ViewModel.swift */,
+				040A9BFE270D29C6009CFF21 /* TableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		040A9BFA270D268E009CFF21 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				040A9BF7270D260D009CFF21 /* TableViewModelType.swift */,
+				040A9BFC270D28C9009CFF21 /* TableViewCellViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		040A9BFB270D26A8009CFF21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				040A9BD9270D1371009CFF21 /* AppDelegate.swift */,
+				040A9BDB270D1371009CFF21 /* SceneDelegate.swift */,
+				040A9BE2270D1375009CFF21 /* Assets.xcassets */,
+				040A9BE7270D1375009CFF21 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040A9BFD270D28C9009CFF21 /* TableViewCellViewModelType.swift in Sources */,
 				040A9BF2270D166F009CFF21 /* TableViewCell.swift in Sources */,
 				040A9BDA270D1371009CFF21 /* AppDelegate.swift in Sources */,
 				040A9BF0270D1475009CFF21 /* Profile.swift in Sources */,
 				040A9BEE270D1429009CFF21 /* TableViewController.swift in Sources */,
+				040A9BF8270D260D009CFF21 /* TableViewModelType.swift in Sources */,
+				040A9BFF270D29C6009CFF21 /* TableViewCellViewModel.swift in Sources */,
+				040A9BF6270D2578009CFF21 /* ViewModel.swift in Sources */,
 				040A9BDC270D1371009CFF21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7R6MFKUCX6;
-				INFOPLIST_FILE = "MVVM - 2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM - 2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7R6MFKUCX6;
-				INFOPLIST_FILE = "MVVM - 2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM - 2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
